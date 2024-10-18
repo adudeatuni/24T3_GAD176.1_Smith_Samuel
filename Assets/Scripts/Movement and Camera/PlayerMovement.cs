@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         SpeedControl();
     }
-
+    // Is called at a fixed interval, as opposed to every frame
     private void FixedUpdate()
     {
         MovePlayer();
