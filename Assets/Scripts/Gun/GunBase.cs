@@ -1,17 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GunLogic;
 
 public class GunBase : MonoBehaviour
 {
+    GunStats stats;
     public AudioSource source;
     public AudioClip clip; 
-    public float damage = 10f;
-    public float range= 100f;
     public Camera playerCam;
-    bool gunIsAuto = true;
+    public bool gunIsAuto = true;
     bool isFiringGun = false;
+    bool hasAmmoLeft = false;
+   public float gunDamage;
+   public float gunRange;
 
+    float gunAmmoCapacity;
+
+    float remainingAmmo;
+
+    public string testing = "Revolver";
+
+void Start ()
+{
+    stats = gameObject.GetComponent<GunStats>();
+    stats.Revolver();
+    getGunStats();
+}
     // Update is called once per frame
     void Update()
     {       // Fire1 is a default button set by unity, and if not manually changed, it's set to Mouse 1
@@ -53,7 +68,7 @@ public class GunBase : MonoBehaviour
         //  Stores the info from the object in the private "hitInfo" variable, which can then be used to do things relating to the object hit, such as debugging the name,
         //  or doing math to deal damage
         RaycastHit hitInfo;
-        if(Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hitInfo, range)) 
+        if(Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hitInfo, gunRange)) 
         {
             Debug.Log("Gun Fired!");
             Debug.Log(hitInfo.transform.name);
@@ -62,8 +77,8 @@ public class GunBase : MonoBehaviour
             // Does a check to see if the hit object has a comonent named "EnemyScript" attatched to it by checking if the enemyScript variable is equal to null or not
             if (enemyScript != null)
             {
-                enemyScript.enemyHealth = enemyScript.enemyHealth - damage;
-                Debug.Log(" " + hitInfo.transform.name + "was hit and dealt " + damage + "damage. Their remaining health is now" + enemyScript.enemyHealth);
+                enemyScript.enemyHealth = enemyScript.enemyHealth - gunDamage;
+                Debug.Log(" " + hitInfo.transform.name + "was hit and dealt " + gunDamage + "damage. Their remaining health is now" + enemyScript.enemyHealth);
             }
 
             
@@ -72,4 +87,14 @@ public class GunBase : MonoBehaviour
 
     }
 
+
+
+
+    public void getGunStats()
+    {
+        
+    }
+
 }
+
+
