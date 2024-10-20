@@ -70,8 +70,6 @@ void Start ()
         {}
     }
 
-
-
     private void Shoot()
     {
  
@@ -107,7 +105,8 @@ void Start ()
 
 
     public void getGunStats()
-    {
+    {   // Changes the variables relating to the "handling" of the gun, pulls them from GunStats script when called.
+        
         GunStats transferStats;
         transferStats = gameObject.GetComponent<GunStats>();
         gunDamage = transferStats.damage;

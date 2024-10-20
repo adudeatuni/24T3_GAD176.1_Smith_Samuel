@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     protected Transform player;
-    protected float myMoveSpeed;
+    private float myMoveSpeed;
     // Start is called before the first frame update
     void Start()
     {

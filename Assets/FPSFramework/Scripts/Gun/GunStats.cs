@@ -71,29 +71,32 @@ public class GunStats : MonoBehaviour
     }
 
 
-    // Below is the template for making your own weapon and stats. 
+    // Below is the template for making your own weapon and stats.
     // All you need to do is to do is copy/paste the function template,
     // change the values to your desired values, and call the function
-    // to change the stats of the gun effectivley "swapping" the gun 
+    //whenever you wish to change weapon
+    // to change the stats of the gun effectively "swapping" the gun
     // the player is using.
-    
-    // NOTE 1: do NOT change "gunBase.getGunStats();" 
-    // that is the function that actually applies the stats to the gun
-
-    // NOTE 2: fireRate is only required if isGunFUllAuto is true, 
+   
+    // NOTE 1: do NOT change "gunBase.getGunStats();"
+    // that is the function that actually applies the stats to the gun in
+    // the GunStats script
+    // NOTE 2: fireRate is only required if isGunFUllAuto is true,
     // Fire rate is in seconds so 0.1f is equal to once every 0.1 seconds
+    // NOTE 3: If fireRate is set to false, the gun will shoot as fast as  
+    // you can click
 
+   // public void WeaponName()
+   // {
+   //     damage = 20;
+   //     ammoCapacity = 31;
+   //     range = 100;
+   //     isGunFullAuto = true;  
+   //     fireRate = 0.1f;      
+   //     Debug.Log("Message for Console");
+   //     gunBase.getGunStats();
+   // }
 
-    // public void WeaponName()
-    // {
-    //     damage = 20;
-    //     ammoCapacity = 31;
-    //     range = 100;
-    //     isGunFullAuto = true;  
-    //     fireRate = 0.1f;      
-    //     Debug.Log("Message for Console");
-    //     gunBase.getGunStats();
-    // }
 
 
 }

@@ -5,12 +5,12 @@ using UnityEngine;
 public class FpsCam : MonoBehaviour
 {
 
-    public float sensitvX;
-    public float sensitvY;
+    [SerializeField] private float sensitvX;
+    [SerializeField] private float sensitvY;
 
     public Transform playerOrientation;
-    float rotationX;
-    float rotationY;
+    private float rotationX;
+    private float rotationY;
     // Start is called before the first frame update
     void Start()
     {
