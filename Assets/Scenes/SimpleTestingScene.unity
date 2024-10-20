@@ -411,7 +411,8 @@ MonoBehaviour:
   source: {fileID: 546318703}
   clip: {fileID: 8300000, guid: 26081b041f1419a4b947eceb842ba78e, type: 3}
   playerCam: {fileID: 546318701}
-  testing: Revolver
+  remainingAmmo: 0
+  currentGun: None
 --- !u!82 &546318703
 AudioSource:
   m_ObjectHideFlags: 0
@@ -523,7 +524,9 @@ MonoBehaviour:
   damage: 0
   ammoCapacity: 0
   range: 0
+  fireRate: 0
   isGunFullAuto: 0
+  gunName: 
 --- !u!1 &765661964
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +739,7 @@ GameObject:
   - component: {fileID: 1112117767}
   m_Layer: 0
   m_Name: PlayerObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -917,8 +920,9 @@ GameObject:
   - component: {fileID: 1190265151}
   - component: {fileID: 1190265150}
   - component: {fileID: 1190265154}
+  - component: {fileID: 1190265155}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1025,6 +1029,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+--- !u!114 &1190265155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190265148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fafd1f2de821ee43a30b2c22a49a684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1227002963
 GameObject:
   m_ObjectHideFlags: 0
