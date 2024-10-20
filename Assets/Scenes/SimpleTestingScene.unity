@@ -252,9 +252,9 @@ GameObject:
   - component: {fileID: 546318701}
   - component: {fileID: 546318700}
   - component: {fileID: 546318699}
+  - component: {fileID: 546318703}
   - component: {fileID: 546318698}
   - component: {fileID: 546318702}
-  - component: {fileID: 546318703}
   - component: {fileID: 546318704}
   m_Layer: 0
   m_Name: PlayerCam
@@ -408,15 +408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeadaad51659ee4987e2b2b2284f063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doesItWork: This Shit works!
-  damage: 10
-  ammoCapacity: 0
-  range: 100
-  isGunFullAuto: 0
   source: {fileID: 546318703}
   clip: {fileID: 8300000, guid: 26081b041f1419a4b947eceb842ba78e, type: 3}
   playerCam: {fileID: 546318701}
-  gunIsAuto: 1
   testing: Revolver
 --- !u!82 &546318703
 AudioSource:
@@ -526,7 +520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0150dd5f531bf364eafcdbf45120755d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doesItWork: This Shit works!
   damage: 0
   ammoCapacity: 0
   range: 0
@@ -923,6 +916,7 @@ GameObject:
   - component: {fileID: 1190265152}
   - component: {fileID: 1190265151}
   - component: {fileID: 1190265150}
+  - component: {fileID: 1190265154}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1018,6 +1012,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190265154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190265148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44422f1eca037a4282f1e591349d17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 100
 --- !u!1 &1227002963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1172,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2033450724}
   - component: {fileID: 2033450723}
-  - component: {fileID: 2033450725}
   m_Layer: 0
   m_Name: CameraNest
   m_TagString: Untagged
@@ -1202,23 +1208,6 @@ Transform:
   - {fileID: 546318697}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2033450725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033450722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0150dd5f531bf364eafcdbf45120755d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doesItWork: This Shit works!
-  damage: 0
-  ammoCapacity: 0
-  range: 0
-  isGunFullAuto: 0
 --- !u!1 &2145680585
 GameObject:
   m_ObjectHideFlags: 0
