@@ -1,0 +1,10 @@
+* af3914e (HEAD -> main, origin/main, origin/HEAD) small changes, changing some variables from public to private where public isn't required. Commenting
+* aca6743 Tidying and neatly packaging assets
+* 5cf51be (origin/features/SimpleAI, features/SimpleAI) FastAI , uses OnTriggerEnter function inherited from Enemy AI
+* e70afc6 Simple AI, moves towards player
+* 039d428 (origin/features/WeaponStats, origin/features/GunFunctionality, features/WeaponStats, features/GunFunctionality) Weapon stats, and changing them + reloading implimented. Also included is template for creating new sets of gun stats.
+* 418a997 Functional Shooting via Raycasting
+* 1808d7f Crosshair, homemade gunshot sound, full-auto, weapon template/stats WIP
+* 31fbd98 (origin/features/shooting) Basic Gun with Raycasting, deubg name from object shot. WIP Weapon Templates and Stats
+* 639b0af Added player movement and fps camera controls
+* 0486e3f Initial commit
